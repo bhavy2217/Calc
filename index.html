@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <style>
+        * {
+            font-weight: 300;
+            font-size: 20px;
+        }
+
+        .table {
+            border: 1px solid black;
+            height: 620px;
+            width: 300px;
+            border: 2px solid grey;
+            background-color: rgb(51, 50, 50);
+            border-radius: 5px;
+            box-shadow: 1px 1px 10px black;
+            padding: 30px 40px;
+
+        }
+
+        #clear {
+            border: 1px solid black;
+            border-radius: 2px;
+            height: 60px;
+            width: 90px;
+            background-color: rgb(22, 22, 22);
+            color: rgb(255, 93, 93);
+            box-shadow: 1px 1px 5px rgb(255, 93, 93);
+            ;
+        }
+
+        #clear:hover {
+            background-color: white;
+            box-shadow: 1px 1px 5px red;
+            font-weight: 500;
+            border: 1px solid white;
+            color: black;
+        }
+
+        #ETV {
+            /* margin: 0px 0px; */
+        }
+
+        #Number {
+            width: 400px;
+            height: 50px;
+            box-shadow: 0px 0px 3px white;
+            border-radius: 2px;
+            font-size: 40px;
+            text-align: right;
+        }
+
+        .buttons {
+            border: 1px solid black;
+            border-radius: 2px;
+            height: 60px;
+            width: 90px;
+            background-color: rgb(22, 22, 22);
+            color: white;
+            box-shadow: 1px 1px 5px white;
+
+        }
+
+        .buttons:hover {
+            background-color: rgb(214, 214, 214);
+            border: 1px solid white;
+            box-shadow: 1px 1px 5px yellow;
+            color: black;
+        }
+
+        td {
+            /* border: 1px solid white; */
+            width: 100px;
+            height: 80px;
+        }
+
+        tr {
+            height: 50px;
+            width: 90px;
+        }
+
+        #zero {
+            width: 200px;
+        }
+
+        #equal {
+            height: 155px;
+            color: skyblue;
+            box-shadow: 1px 1px 5px skyblue;
+        }
+
+        #equal:hover {
+            color: black;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <center> -->
+    <table class="table" cellspacing="0">
+        <form name="forms" id="form">
+            <tr>
+                <td id="ETV" colspan="4"><input id="Number" type="text" name="answer"><br><br></td>
+            </tr>
+            <tr>
+                <td>
+                    <center><input id="clear" class="buttons" type="button" value=" C "
+                            onclick="forms.answer.value = ' ' ">
+                </td>
+                <td>
+                    <center> <input class="buttons" type="button" value=" / " onclick="forms.answer.value += '/' ">
+                </td>
+                <td>
+                    <center><input class="buttons" type="button" value=" * " onclick="forms.answer.value += '*' ">
+                </td>
+                <td>
+                    <center> <input class="buttons" type="button" value="Del">
+                        <!-- onclick="forms.answer.value -=  " -->
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <center><input class="buttons" type="button" value=" 7 " onclick="forms.answer.value += '7' ">
+                </td>
+                <td>
+                    <center> <input class="buttons" type="button" value=" 8 " onclick="forms.answer.value += '8' ">
+                </td>
+                <td>
+                    <center><input class="buttons" type="button" value=" 9 " onclick="forms.answer.value += '9' ">
+                </td>
+                <td>
+                    <center> <input class="buttons" type="button" value=" - " onclick="forms.answer.value += '-'">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <center><input class="buttons" type="button" value=" 4 " onclick="forms.answer.value += '4' ">
+                </td>
+                <td>
+                    <center> <input class="buttons" type="button" value=" 5 " onclick="forms.answer.value += '5' ">
+                </td>
+                <td>
+                    <center><input class="buttons" type="button" value=" 6 " onclick="forms.answer.value += '6' ">
+                </td>
+                <td>
+                    <center> <input class="buttons" type="button" value=" + " onclick="forms.answer.value += '+'">
+                </td>
+
+            </tr>
+            <tr>
+                <td>
+                    <center><input class="buttons" type="button" value=" 1 " onclick="forms.answer.value += '1' ">
+                </td>
+                <td>
+                    <center> <input class="buttons" type="button" value=" 2 " onclick="forms.answer.value += '2' ">
+                </td>
+                <td>
+                    <center><input class="buttons" type="button" value=" 3 " onclick="forms.answer.value += '3' ">
+                </td>
+                <td rowspan="2">
+                    <center><input class="buttons" id="equal" type="button" value=" = "
+                            onclick="forms.answer.value = eval(forms.answer.value) ">
+                </td>
+
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <center><input id="zero" class="buttons" type="button" value=" 0 "
+                            onclick="forms.answer.value += '0' ">
+                </td>
+                <td>
+                    <center><input class="buttons" type="button" value=" . " onclick="forms.answer.value += '.'">
+                </td>
+
+            </tr>
+
+        </form>
+    </table>
+</body>
+
+</html>
